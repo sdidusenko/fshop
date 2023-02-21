@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import Navbar from "./components/Navbar/Navbar";
 import './App.css';
-
+import {Routes, Route} from "react-router-dom";
+import Settings from "./components/Navbar/Setting/Settings";
+import Feedback from "./components/Navbar/Feedback/Feedback";
+import Groups from "./components/Navbar/Groups/Groups";
 function App() {
+     let pathGroups='/groups'
+    let pathFeedBack='/feedback'
+    let pathSettings='/settings'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='app-wrapper'>
+        <Navbar />
+       <div className='app-wrapper-content'>
+          <Routes>
+              <Route path={pathGroups}
+                     element={<Groups />}/>
+              <Route path={pathFeedBack}
+                     element={<Feedback />}/>
+              <Route path={pathSettings}
+                     element={<Settings />}/>
+          </Routes>
+        </div>
+      </div>
   );
 }
 
