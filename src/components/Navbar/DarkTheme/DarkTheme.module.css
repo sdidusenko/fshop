@@ -1,4 +1,11 @@
 .styleIconTheme{
-    margin-top: -10px;
-
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+}
+.styleIconTheme:hover{
+   /* width: 34px;*/
+    /*box-shadow: 5px 5px 5px 5px red;*/
+    height: 35px;
+    box-shadow: 4px 4px 15px 0 rgba(194, 19, 19, 0.3)
 }

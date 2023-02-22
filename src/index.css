@@ -23,18 +23,13 @@ code {
 {
   --background-color: #cfcfcf;
   --color-text: black;
-  --main: #327a09;
+  --main:linear-gradient(270deg, rgb(80, 80, 80) 60%, rgb(33, 128, 131) 88%)
 }
 
 body {
   background: var(--background-color);
   color: var(--color-text);
 }
-/*
-.wrapper{
-  background: var(--main);
 
-}
-*/
 
 
