@@ -9,6 +9,7 @@ import DarkTheme from "./DarkTheme/DarkTheme";
 import {useTranslation} from "react-i18next";
 import useLocalstorage from "../../Hooks/use-localstorage";
 import i18n from "../../i18n";
+import Slider from "../Body/Slider";
 
 
 const Navbar = (props) => {
@@ -33,6 +34,7 @@ const Navbar = (props) => {
             </div>
             <div className={style.titleAndMenu}>
                 <div className={style.titleText}>{t('FAKER SHOP')}</div>
+                <div><h2>dfdf</h2></div>
                 <div className={style.nav} onClick={() => setNav(false)}>
                     <ul className={
                         nav ? [style.menu, style.active].join(' ') : [style.menu]
