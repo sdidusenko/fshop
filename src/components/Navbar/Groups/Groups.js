@@ -1,7 +1,7 @@
 import Slider from "../../Body/Slider";
 
 
-const Groups = (props) => {
+const Groups = () => {
 
     return (
         <Slider/>

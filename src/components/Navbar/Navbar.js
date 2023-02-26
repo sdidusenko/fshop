@@ -1,7 +1,4 @@
 import style from './Navbar.module.css'
-import Groups from "./Groups/Groups";
-import Feedback from "./Feedback/Feedback";
-import Settings from "./Setting/Settings";
 import Logo from './../../Assets/FakeShop.png'
 import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import {useState} from "react";
@@ -13,7 +10,7 @@ import {NavLink} from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 
-const Navbar = (props) => {
+const Navbar = () => {
     const {t} = useTranslation()
     const [language, setLanguage] = useLocalstorage('language', 'ua')
 
