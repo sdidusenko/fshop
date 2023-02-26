@@ -9,7 +9,8 @@ import DarkTheme from "./DarkTheme/DarkTheme";
 import {useTranslation} from "react-i18next";
 import useLocalstorage from "../../Hooks/use-localstorage";
 import i18n from "../../i18n";
-import Slider from "../Body/Slider";
+import {NavLink} from "react-router-dom";
+import classes from "./Navbar.module.css";
 
 
 const Navbar = (props) => {
@@ -34,29 +35,35 @@ const Navbar = (props) => {
             </div>
             <div className={style.titleAndMenu}>
                 <div className={style.titleText}>{t('FAKER SHOP')}</div>
-                <div><h2>dfdf</h2></div>
                 <div className={style.nav} onClick={() => setNav(false)}>
                     <ul className={
                         nav ? [style.menu, style.active].join(' ') : [style.menu]
                     }>
-                        <li>
-                            <Groups/>
+                        <li className={style.nB}>
+                            <button className={`${style.neonBtn} ${style.nB} ${style.active} ${style.neonBtnPurple}`}
+                                    onClick={handleLanguageChange}> {language === 'ua' ? t('Ukrainian') : t('English')}</button>
                         </li>
                         <li>
-                            <Feedback/>
+                            <NavLink to='/groups'
+                                     className={navData => navData.isActive ? classes.active : classes.notActive}>{t('Groups')}
+                            </NavLink>
                         </li>
                         <li>
-                            <Settings/>
+                            <NavLink to='/feedback'
+                                     className={navData => navData.isActive ? classes.active : classes.notActive}>{t('Feedback')}</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/settings'
+                                     className={navData => navData.isActive ? classes.active : classes.notActive}>{t('Settings')}</NavLink>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className={style.langAndColor}>
-                    <div className={style.language}>
-                        <button className={`${style.neonBtn} ${style.neonBtnPurple}`}
+                <div>
+                    <button className={`${style.neonBtn} ${style.neonBtnPurple}`}
                             onClick={handleLanguageChange}> {language === 'ua' ? t('Ukrainian') : t('English')}</button>
-                        {/*<button className='reload' onClick={()=>window.location.reload()}>{t('refresh page')}</button>*/}
-                    </div>
+                </div>
                 <div className={style.themeMode}>
                     <DarkTheme/>
                 </div>
@@ -64,7 +71,6 @@ const Navbar = (props) => {
             <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
                 {nav ? <AiOutlineClose size={25}/> : <AiOutlineMenu size={25}/>}
             </div>
-
         </div>
     )
 }

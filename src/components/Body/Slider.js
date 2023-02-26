@@ -1,21 +1,21 @@
 import React from 'react';
 import {Carousel} from "react-bootstrap";
-import f1 from './../../../Assets/photo-1.jpg'
-import f2 from './../../../Assets/photo-2.jpg'
-import f3 from './../../../Assets/photo-3.jpg'
-import f4 from './../../../Assets/photo-4.jpg'
-import f5 from './../../../Assets/photo-5.jpg'
-import f6 from './../../../Assets/photo-6.jpg'
-import f7 from './../../../Assets/photo-7.jpg'
-import f8 from './../../../Assets/photo-8.jpg'
-import f9 from './../../../Assets/photo-9.jpg'
-import f10 from './../../../Assets/photo-10.jpg'
-import f11 from './../../../Assets/photo-11.jpg'
+import f1 from './../../Assets/photo-1.jpg'
+import f2 from './../../Assets/photo-2.jpg'
+import f3 from './../../Assets/photo-3.jpg'
+import f4 from './../../Assets/photo-4.jpg'
+import f5 from './../../Assets/photo-5.jpg'
+import f6 from './../../Assets/photo-6.jpg'
+import f7 from './../../Assets/photo-7.jpg'
+import f8 from './../../Assets/photo-8.jpg'
+import f9 from './../../Assets/photo-9.jpg'
+import f10 from './../../Assets/photo-10.jpg'
+import f11 from './../../Assets/photo-11.jpg'
 
 function Slider(props) {
     return (
         <div>
-            <Carousel className='carousel-fade'>
+            <Carousel /*className='carousel-fade'*/ interval={3000} >
                 <Carousel.Item>
                     <img style={{'height': '70vh'}} className='mt-2 d-block me-auto ms-auto' src={f1} alt='photo1'/>
                     <Carousel.Caption>
